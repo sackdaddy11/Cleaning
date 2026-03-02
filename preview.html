@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CS Cleaning | Bowling Green, KY and Surrounding Areas</title>
+  <meta name="description" content="CS Cleaning provides reliable commercial cleaning for offices and facilities in Bowling Green, KY and surrounding areas. Request a free quote." />
+  <meta name="keywords" content="commercial cleaning, office cleaning, janitorial services, Bowling Green KY, cleaning services, restroom sanitation, floor care" />
+
+  <style>
+    :root{
+      --red:#c62828;
+      --redDark:#b71c1c;
+      --bg:#f6f7f8;
+      --text:#222;
+      --muted:#5a5a5a;
+      --card:#ffffff;
+      --border:#e7e7e7;
+      --shadow: 0 10px 24px rgba(0,0,0,0.08);
+      --radius: 14px;
+      --max: 1100px;
+    }
+
+    *{ box-sizing:border-box; }
+    html{ scroll-behavior:smooth; }
+    body{
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.5;
+    }
+
+    /* Ribbon nav */
+    .nav-wrap{
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: var(--red);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.10);
+    }
+    nav{
+      max-width: var(--max);
+      margin: 0 auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding: 10px 16px;
+      gap: 14px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap: 10px;
+      color:#fff;
+      font-weight: 800;
+      letter-spacing: .4px;
+      text-decoration:none;
+      white-space:nowrap;
+    }
+    .brand-badge{
+      width:34px;
+      height:34px;
+      border-radius: 10px;
+      background:#fff;
+      color: var(--red);
+      display:grid;
+      place-items:center;
+      font-weight: 900;
+    }
+    .nav-links{
+      display:flex;
+      flex-wrap:wrap;
+      gap: 6px;
+      justify-content:flex-end;
+    }
+    .nav-links a{
+      color:#fff;
+      text-decoration:none;
+      font-weight: 700;
+      padding: 10px 12px;
+      border-radius: 10px;
+      transition: background .2s ease, transform .2s ease;
+      font-size: 15px;
+    }
+    .nav-links a:hover{
+      background: var(--redDark);
+      transform: translateY(-1px);
+    }
+    .nav-cta{
+      display:none;
+    }
+
+    /* Hero */
+    header.hero{
+      background:
+        radial-gradient(900px 380px at 20% 10%, rgba(255,255,255,0.18), transparent 60%),
+        radial-gradient(700px 300px at 70% 30%, rgba(0,0,0,0.10), transparent 60%),
+        linear-gradient(135deg, var(--red) 0%, #a51717 100%);
+      color:#fff;
+      padding: 64px 16px 42px;
+    }
+    .container{
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 22px;
+      align-items: start;
+    }
+    .hero h1{
+      margin:0 0 10px 0;
+      font-size: 52px;
+      line-height: 1.05;
+      letter-spacing: .4px;
+    }
+    .hero p{
+      margin: 10px 0;
+      font-size: 18px;
+      color: rgba(255,255,255,0.92);
+      max-width: 60ch;
+    }
+    .hero .sub{
+      font-weight: 700;
+      color:#fff;
+    }
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+    .btn{
+      display:inline-block;
+      padding: 14px 18px;
+      border-radius: 12px;
+      font-weight: 800;
+      text-decoration:none;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+      border: 2px solid transparent;
+    }
+    .btn-primary{
+      background:#fff;
+      color: var(--red);
+      box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+    }
+    .btn-primary:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 14px 28px rgba(0,0,0,0.22);
+    }
+    .btn-ghost{
+      background: transparent;
+      border-color: rgba(255,255,255,0.7);
+      color:#fff;
+    }
+    .btn-ghost:hover{
+      background: rgba(255,255,255,0.10);
+      transform: translateY(-2px);
+    }
+
+    .hero-card{
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.22);
+      border-radius: var(--radius);
+      padding: 18px;
+      backdrop-filter: blur(6px);
+    }
+    .hero-card h3{
+      margin: 0 0 8px 0;
+      font-size: 16px;
+      letter-spacing: .3px;
+    }
+    .hero-card ul{
+      margin: 10px 0 0 18px;
+      padding:0;
+      color: rgba(255,255,255,0.92);
+      font-size: 14px;
+    }
+    .hero-card li{ margin: 6px 0; }
+
+    /* Sections */
+    section{
+      padding: 54px 16px;
+    }
+    .section-title{
+      margin: 0 0 10px 0;
+      font-size: 34px;
+      letter-spacing: .2px;
+      text-align:center;
+    }
+    .section-sub{
+      margin: 0 auto 26px auto;
+      max-width: 80ch;
+      text-align:center;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    /* Cards grid */
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .card{
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px;
+    }
+    .card h3{
+      margin: 0 0 8px 0;
+      font-size: 18px;
+      font-weight: 800; /* bold titles per request */
+    }
+    .card p{
+      margin: 0;
+      color: var(--muted);
+    }
+
+    /* Services list */
+    .services-wrap{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 18px;
+    }
+    .service-list{
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: var(--shadow);
+    }
+    .service-list h3{
+      margin: 0 0 10px 0;
+      font-size: 18px;
+      font-weight: 900;
+    }
+    .service-list ul{
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+    .service-list li{ margin: 8px 0; }
+
+    /* Quote */
+    .quote{
+      background: #fff;
+    }
+    .quote-grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      align-items: start;
+    }
+    form{
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: var(--shadow);
+    }
+    label{
+      display:block;
+      font-weight: 800;
+      margin-top: 12px;
+      margin-bottom: 6px;
+      font-size: 14px;
+    }
+    input, textarea, select{
+      width:100%;
+      padding: 12px 12px;
+      border-radius: 12px;
+      border: 1px solid #d9d9d9;
+      font-size: 15px;
+      outline: none;
+    }
+    input:focus, textarea:focus, select:focus{
+      border-color: var(--red);
+      box-shadow: 0 0 0 4px rgba(198,40,40,0.12);
+    }
+    .form-row{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .submit{
+      margin-top: 14px;
+      width: 100%;
+      cursor:pointer;
+      background: var(--red);
+      color:#fff;
+      border: none;
+      padding: 14px 16px;
+      border-radius: 12px;
+      font-weight: 900;
+      font-size: 16px;
+      transition: background .2s ease, transform .2s ease, box-shadow .2s ease;
+      box-shadow: 0 10px 20px rgba(198,40,40,0.25);
+    }
+    .submit:hover{
+      background: var(--redDark);
+      transform: translateY(-1px);
+      box-shadow: 0 14px 26px rgba(198,40,40,0.30);
+    }
+    .fineprint{
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* About + Contact */
+    .split{
+      display:grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 16px;
+      align-items:start;
+    }
+    .callout{
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: var(--shadow);
+    }
+    .callout h3{
+      margin: 0 0 10px 0;
+      font-size: 18px;
+      font-weight: 900;
+    }
+    .callout p, .callout li{
+      color: var(--muted);
+    }
+    .callout ul{
+      margin: 0;
+      padding-left: 18px;
+    }
+    .contact-card{
+      border-left: 6px solid var(--red);
+    }
+    .contact-line{
+      margin: 8px 0;
+      font-size: 16px;
+    }
+    .contact-line a{
+      color: var(--red);
+      text-decoration:none;
+      font-weight: 900;
+    }
+    .contact-line a:hover{
+      text-decoration: underline;
+    }
+
+    footer{
+      background: #121212;
+      color: rgba(255,255,255,0.85);
+      padding: 22px 16px;
+      text-align:center;
+      font-size: 14px;
+    }
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .hero-grid{ grid-template-columns: 1fr; }
+      .grid{ grid-template-columns: 1fr; }
+      .services-wrap{ grid-template-columns: 1fr; }
+      .quote-grid{ grid-template-columns: 1fr; }
+      .split{ grid-template-columns: 1fr; }
+      .form-row{ grid-template-columns: 1fr; }
+      .nav-links{ justify-content:center; }
+      nav{ justify-content:center; flex-wrap:wrap; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Ribbon Navigation -->
+  <div class="nav-wrap">
+    <nav>
+      <a class="brand" href="#home" aria-label="CS Cleaning Home">
+        <span class="brand-badge">CS</span>
+        <span>CS Cleaning</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#services">Cleaning Services</a>
+        <a href="#quote">Request a Quote</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Home -->
+  <header id="home" class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <h1>Commercial Cleaning You Can Count On</h1>
+          <p class="sub">Serving Bowling Green, KY and surrounding areas.</p>
+          <p>
+            Reliable, detail-focused janitorial services for offices, restrooms, and common areas.
+            Consistent quality, clear communication, and a local owner you can reach.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#quote">Request a Free Quote</a>
+            <a class="btn btn-ghost" href="#services">View Services</a>
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <h3>What you can expect</h3>
+          <ul>
+            <li>Dependable scheduling and follow-through</li>
+            <li>Clear checklists & consistent standards</li>
+            <li>Professional crews and responsive support</li>
+            <li>Flexible service plans (nightly / weekly / custom)</li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </header>
+
+  <!-- Services overview cards -->
+  <section>
+    <div class="container">
+      <h2 class="section-title">Simple, dependable commercial cleaning</h2>
+      <p class="section-sub">
+        We focus on the essentials that keep your facility clean, professional, and ready for employees and customers.
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <h3><strong>Office Cleaning</strong></h3>
+          <p>Trash removal, dusting, lobby cleaning, conference rooms, and general janitorial service.</p>
+        </div>
+        <div class="card">
+          <h3><strong>Restroom Sanitation</strong></h3>
+          <p>Full restroom cleaning, disinfecting, supply checks, and floor care for a consistently clean experience.</p>
+        </div>
+        <div class="card">
+          <h3><strong>Break Rooms & Common Areas</strong></h3>
+          <p>Kitchenette cleaning, surface sanitizing, appliance wipe-down, and common area resets.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cleaning Services (full list) -->
+  <section id="services">
+    <div class="container">
+      <h2 class="section-title">Cleaning Services</h2>
+      <p class="section-sub">
+        Choose a service plan that fits your space. We can clean after hours, early mornings, or on a custom schedule.
+      </p>
+
+      <div class="services-wrap">
+        <div class="service-list">
+          <h3>Routine Janitorial</h3>
+          <ul>
+            <li>Trash removal & liner replacement</li>
+            <li>Dusting (desks, ledges, reachable surfaces)</li>
+            <li>Vacuuming & sweeping</li>
+            <li>Mopping hard floors</li>
+            <li>Glass cleaning (interior doors / entry)</li>
+            <li>Spot cleaning walls and high-touch points</li>
+          </ul>
+        </div>
+
+        <div class="service-list">
+          <h3>Restrooms & Break Rooms</h3>
+          <ul>
+            <li>Disinfect toilets, urinals, sinks, and counters</li>
+            <li>Refill checks (soap, paper towels, TP) — by request</li>
+            <li>Mirror & chrome polishing</li>
+            <li>Break room countertops, tables, and touchpoints</li>
+            <li>Microwave & exterior appliance wipe-down</li>
+            <li>Floor care (spot clean + full mop)</li>
+          </ul>
+        </div>
+
+        <div class="service-list">
+          <h3>Detail Services (Add-ons)</h3>
+          <ul>
+            <li>Deep clean / reset clean</li>
+            <li>Floor scrub & wax (as quoted)</li>
+            <li>Interior window detailing</li>
+            <li>Move-in / move-out office cleaning</li>
+            <li>High-dust removal (vents/trim as accessible)</li>
+            <li>Custom checklists for your facility</li>
+          </ul>
+        </div>
+
+        <div class="service-list">
+          <h3>Who We Serve</h3>
+          <ul>
+            <li>Professional offices</li>
+            <li>Medical and dental offices</li>
+            <li>Multi-tenant office buildings</li>
+            <li>Light industrial offices / administrative areas</li>
+            <li>Churches and community facilities</li>
+            <li>Property-managed common areas</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Request a Quote -->
+  <section id="quote" class="quote">
+    <div class="container">
+      <h2 class="section-title">Request a Quote</h2>
+      <p class="section-sub">
+        Tell us a little about your facility and we’ll follow up to schedule a walkthrough and provide a clear quote.
+      </p>
+
+      <div class="quote-grid">
+        <form id="quoteForm">
+          <div class="form-row">
+            <div>
+              <label for="company">Company Name</label>
+              <input id="company" name="company" type="text" placeholder="Company / Facility" required />
+            </div>
+            <div>
+              <label for="contactName">Contact Name</label>
+              <input id="contactName" name="contactName" type="text" placeholder="Your name" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="name@email.com" required />
+            </div>
+            <div>
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" placeholder="(###) ###-####" />
+            </div>
+          </div>
+
+          <label for="serviceType">Service Needed</label>
+          <select id="serviceType" name="serviceType">
+            <option value="Routine Janitorial">Routine Janitorial</option>
+            <option value="Restrooms & Break Rooms">Restrooms & Break Rooms</option>
+            <option value="Deep Clean / Reset">Deep Clean / Reset</option>
+            <option value="Floor Care">Floor Care</option>
+            <option value="Not sure yet">Not sure yet</option>
+          </select>
+
+          <label for="details">Facility Details</label>
+          <textarea id="details" name="details" rows="5" placeholder="Approx. square footage, number of restrooms, cleaning frequency (nightly/weekly), and anything special to note."></textarea>
+
+          <button class="submit" type="submit">Submit Request</button>
+
+          <div class="fineprint">
+            Submits via your email app (mailto). If you’d prefer a “true” web form that works without an email client, tell me and I’ll wire it up.
+          </div>
+        </form>
+
+        <div class="callout">
+          <h3>How quoting works</h3>
+          <ul>
+            <li>Quick call/text to confirm details</li>
+            <li>Walkthrough (15–30 minutes)</li>
+            <li>Written quote with checklist & frequency</li>
+            <li>Service starts as soon as you’re ready</li>
+          </ul>
+          <p style="margin-top:12px;">
+            Prefer to call or text? Jump to <a href="#contact" style="color: var(--red); font-weight: 900; text-decoration:none;">Contact</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us -->
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About Us</h2>
+      <p class="section-sub">
+        CS Cleaning is a locally owned commercial cleaning company focused on consistency, communication, and quality work.
+      </p>
+
+      <div class="split">
+        <div class="callout">
+          <h3>What we do differently</h3>
+          <ul>
+            <li>Clear expectations with simple checklists</li>
+            <li>Consistent crews and reliable schedules</li>
+            <li>Fast communication and accountability</li>
+            <li>Professional service without the corporate runaround</li>
+          </ul>
+          <p style="margin-top:12px;">
+            Our goal is straightforward: keep your facility clean and make your life easier.
+          </p>
+        </div>
+
+        <div class="callout">
+          <h3>Service Area</h3>
+          <p>
+            Based in Bowling Green, KY — serving surrounding areas by request.
+          </p>
+          <p style="margin-top:10px;">
+            If you’re outside Bowling Green, submit a quote request and we’ll confirm availability.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <p class="section-sub">
+        Reach out anytime — we’ll respond as quickly as possible.
+      </p>
+
+      <div class="split">
+        <div class="callout contact-card">
+          <h3>CS Cleaning</h3>
+          <div class="contact-line"><strong>Owner:</strong> Cole Sack</div>
+          <div class="contact-line"><strong>Phone:</strong> <a href="tel:+12709916624">(270) 991-6624</a></div>
+          <div class="contact-line"><strong>Email:</strong> <a href="mailto:cole.sack@gmail.com">cole.sack@gmail.com</a></div>
+          <div class="contact-line"><strong>Service Area:</strong> Bowling Green, KY & surrounding areas</div>
+        </div>
+
+        <div class="callout">
+          <h3>Business hours</h3>
+          <p>Walkthroughs and quoting by appointment.</p>
+          <ul>
+            <li>Weekdays: by appointment</li>
+            <li>Evenings: available for after-hours walkthroughs</li>
+            <li>Weekends: limited availability</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="year"></span> CS Cleaning. All rights reserved.
+  </footer>
+
+  <script>
+    // Footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Mailto quote submission (opens user's email client)
+    const form = document.getElementById("quoteForm");
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const company = document.getElementById("company").value.trim();
+      const contactName = document.getElementById("contactName").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const serviceType = document.getElementById("serviceType").value;
+      const details = document.getElementById("details").value.trim();
+
+      const subject = encodeURIComponent(`CS Cleaning Quote Request - ${company || "New Inquiry"}`);
+      const bodyLines = [
+        "New Quote Request",
+        "----------------------",
+        `Company: ${company}`,
+        `Contact: ${contactName}`,
+        `Email: ${email}`,
+        `Phone: ${phone || "N/A"}`,
+        `Service Needed: ${serviceType}`,
+        "",
+        "Facility Details:",
+        details || "N/A",
+        "",
+        "Sent from: CS Cleaning website"
+      ];
+
+      const body = encodeURIComponent(bodyLines.join("\n"));
+      window.location.href = `mailto:cole.sack@gmail.com?subject=${subject}&body=${body}`;
+    });
+  </script>
+</body>
+</html>
